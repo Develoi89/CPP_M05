@@ -25,6 +25,18 @@ int main()
     {
         std::cout << e.what() << std::endl;
     }
+
+    try
+    {
+        Bureaucrat First(1, "first");
+        std::cout << First;
+        std::cout << "downgrading First bureaucrat." << std::endl;
+        First.downGrade();
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << e.what() << std::endl;
+    }
     
     return 0;
 }
