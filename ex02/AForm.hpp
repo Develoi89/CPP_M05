@@ -41,6 +41,7 @@ class AForm
         ~AForm();
         std::string getName()const;
         bool getSign()const;
+        void setSign(bool m);
         int getGs()const;
         int getGe()const;
         void beSigned(Bureaucrat const &b);

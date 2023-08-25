@@ -4,6 +4,16 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string name, std::string fname
 {
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & c): AForm(c.getGs(), c.getGe(), c.getName()), _fname(c._fname)
+{
+}
+
+ShrubberyCreationForm & ShrubberyCreationForm::operator = (ShrubberyCreationForm const & c)
+{
+    _fname = c._fname;
+    setSign(c.getSign());
+}
+
 void ShrubberyCreationForm::exe()const
 {
     std::ofstream file(_fname);

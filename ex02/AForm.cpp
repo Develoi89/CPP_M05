@@ -59,6 +59,11 @@ bool AForm::getSign()const
     return _signed;
 }
 
+void AForm::setSign(bool m)
+{
+    _signed = m;
+}
+
 int AForm::getGs()const
 {
     return _gs;
