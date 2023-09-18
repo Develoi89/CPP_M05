@@ -3,10 +3,12 @@ NAME		=	test
 SRC			=	AForm.cpp\
 				Bureaucrat.cpp\
 				ShrubberyCreationForm.cpp\
+				RobotomyRequestForm.cpp\
 				main.cpp
 
 HDS			=	AForm.hpp\
 				Bureaucrat.hpp\
+				RobotomyRequestForm.hpp\
 				ShrubberyCreationForm.hpp
 
 OBJ			=	$(SRC:.cpp=.o)
