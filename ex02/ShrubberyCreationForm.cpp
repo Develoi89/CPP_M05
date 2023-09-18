@@ -1,22 +1,25 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string name, std::string fname): AForm(145, 137, name), _fname(fname)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target): AForm(145, 137, target), _target(target)
 {
+    std::cout << "ShrubberyForm with target " << _target << " created." << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & c): AForm(c.getGs(), c.getGe(), c.getName()), _fname(c._fname)
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & c): AForm(c.getGs(), c.getGe(), c.getName()), _target(c._target)
 {
+    std::cout << "ShrubberyForm with target " << _target << " created from ." << c.getName() << std::endl; 
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator = (ShrubberyCreationForm const & c)
 {
-    _fname = c._fname;
+    _target = c._target;
     setSign(c.getSign());
+    return *this;
 }
 
 void ShrubberyCreationForm::exe()const
 {
-    std::ofstream file(_fname);
+    std::ofstream file(_target);
     if (file.is_open())
     {
     file << "      *            *            *      " << std::endl;
@@ -31,4 +34,5 @@ void ShrubberyCreationForm::exe()const
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
+    std::cout << "ShrubberyForm with target " << _target << " was destroyed." << std::endl;
 }

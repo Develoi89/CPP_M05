@@ -4,7 +4,7 @@
 
 int main()
 {
-    AForm *A = new ShrubberyCreationForm("prueba", "prueba");
+    AForm *A = new ShrubberyCreationForm("prueba");
     Bureaucrat B(150, "me");
     Bureaucrat C(1, "you");
     try
@@ -25,6 +25,7 @@ int main()
     }
     B.executeForm(*A);
     C.executeForm(*A);
+    delete A;
     return 0;
 }
 

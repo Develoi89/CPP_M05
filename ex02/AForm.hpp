@@ -38,7 +38,7 @@ class AForm
         AForm(const int gs, int ge, std::string const n);
         AForm(AForm const &f);
         AForm &operator = (AForm const &f);
-        ~AForm();
+        virtual ~AForm() {};
         std::string getName()const;
         bool getSign()const;
         void setSign(bool m);

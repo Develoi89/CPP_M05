@@ -20,7 +20,7 @@ Form::Form(const int  gs, const int ge, std::string const n): _gs(gs), _ge(ge), 
 
 void Form::beSigned(Bureaucrat const &b)
 {
-    std::cout << "Bureaucrat " << b.getName() << " try to sign " << getName() << " Form." << std::endl;
+    std::cout << "Bureaucrat " << b.getName() << " trying to sign " << getName() << " Form." << std::endl;
     if (_gs > b.getGrade())
     {
         if(_signed == true)

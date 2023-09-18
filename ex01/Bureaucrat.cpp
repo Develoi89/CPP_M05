@@ -55,7 +55,7 @@ void Bureaucrat::signForm(bool s, std::string const n)const
     if(s == true)
         std::cout << _name << " signed " << n << "." << std::endl;
     else
-        std::cout << _name << " couldn’t sign " << n << " because the grade's bureaucrat is not enough." << std::endl;
+        std::cout << _name << " couldn't sign " << n << " because the grade's bureaucrat is not enough." << std::endl;
 }
 
 std::ostream &operator << ( std::ostream & o, const Bureaucrat&b )

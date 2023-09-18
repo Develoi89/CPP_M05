@@ -8,7 +8,7 @@ AForm::GradeOrSignException::GradeOrSignException() : std::runtime_error("Bureau
 AForm::AForm(const int  gs, const int ge, std::string const n): _gs(gs), _ge(ge), _name(n), _signed(false)
 {
     if((gs > 0 && gs < 151) && (ge > 0 && ge < 151))
-        std::cout << "Form " << getName() << " created." << std::endl;
+        std::cout << "AForm " << getName() << " created." << std::endl;
     else if(gs < 1 && ge < 1)
     {
         throw GradeTooLowException();
@@ -72,11 +72,6 @@ int AForm::getGs()const
 int AForm::getGe()const
 {
     return _ge;
-}
-
-AForm::~AForm()
-{
-    std::cout << "Form " << getName() << " was destroyed." << std::endl;
 }
 
 std::string AForm::getName()const

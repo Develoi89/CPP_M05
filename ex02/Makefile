@@ -26,7 +26,7 @@ clean		:
 		@rm -rf
 
 fclean		:	clean
-		@rm -rf $(NAME) $(OBJ)
+		@rm -rf $(NAME) $(OBJ) prueba
 
 re			:	fclean	all
 
