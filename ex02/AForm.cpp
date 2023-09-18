@@ -3,7 +3,7 @@
 
 AForm::GradeTooHighException::GradeTooHighException() : std::runtime_error("Formgrade too high, Form not created or signed."){}
 AForm::GradeTooLowException::GradeTooLowException() : std::runtime_error("Formgrade too low, Form not created."){}
-AForm::GradeOrSignException::GradeOrSignException() : std::runtime_error("Bureaucratgrade too low or Form not signed."){}
+AForm::GradeOrSignException::GradeOrSignException() : std::runtime_error("Bureaucratgrade too low or Form not signed or executed."){}
 
 AForm::AForm(const int  gs, const int ge, std::string const n): _gs(gs), _ge(ge), _name(n), _signed(false)
 {

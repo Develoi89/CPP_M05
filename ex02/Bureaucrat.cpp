@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::GradeTooHighException::GradeTooHighException() : std::runtime_error("grade too high, class not created or upgraded."){}
-Bureaucrat::GradeTooLowException::GradeTooLowException() : std::runtime_error("grade too low, class not created or downgraded."){}
+Bureaucrat::GradeTooHighException::GradeTooHighException() : std::runtime_error(" grade too high, class not created or upgraded."){}
+Bureaucrat::GradeTooLowException::GradeTooLowException() : std::runtime_error(" grade too low, class not created or downgraded."){}
 
 Bureaucrat::Bureaucrat(int g, std::string const name): _name(name)
 {
