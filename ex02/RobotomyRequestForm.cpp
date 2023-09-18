@@ -33,4 +33,5 @@ void RobotomyRequestForm::exe()const
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
+    std::cout << "RobotomyRequestForm with target " << _target << " was destroyed." << std::endl;
 }
