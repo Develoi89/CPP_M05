@@ -33,7 +33,7 @@ void Bureaucrat::upGrade()
     _grade--;
     if(_grade < 1)
     {
-        std::cout << this->_name;
+        // std::cout << this->_name;
         throw GradeTooHighException();
     }
 }
