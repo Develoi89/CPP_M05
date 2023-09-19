@@ -23,15 +23,7 @@ void AForm::beSigned(Bureaucrat const &b)
 {
     std::cout << "Bureaucrat " << b.getName() << " try to sign " << getName() << " Form." << std::endl;
     if (_gs > b.getGrade())
-    {
-        if(_signed == true)
-            std::cout << "its already signed." << std::endl;
-        else
-        {
-            _signed = true;
-            b.signForm(getSign(), getName());
-        }
-    }
+        _signed = true;
     else
         throw GradeTooHighException();
 }

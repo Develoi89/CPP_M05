@@ -45,8 +45,9 @@ std::cout << std::endl;
     {
         Bureaucrat First(1, "first");
         Form A(40, 50, "a");
-        A.beSigned(First);
+        First.signForm(&A);
         std::cout << A;
+        First.signForm(&A);
     }
     catch(const std::exception& e)
     {
@@ -59,7 +60,7 @@ std::cout << std::endl;
         Bureaucrat First(60, "first");
         Form A(40, 50, "a");
         std::cout << A;
-        A.beSigned(First);
+        First.signForm(&A);
     }
     catch(const std::exception& e)
     {

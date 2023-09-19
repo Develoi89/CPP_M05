@@ -21,20 +21,10 @@ Form::Form(const int  gs, const int ge, std::string const n): _gs(gs), _ge(ge), 
 void Form::beSigned(Bureaucrat const &b)
 {
     std::cout << "Bureaucrat " << b.getName() << " trying to sign " << getName() << " Form." << std::endl;
-    if (_gs > b.getGrade())
-    {
-        if(_signed == true)
-            std::cout << "its already signed." << std::endl;
-        else
-        {
-            _signed = true;
-            b.signForm(getSign(), getName());
-        }
-    }
+    if (_gs >= b.getGrade())
+        _signed = true;
     else
-    {
         throw GradeTooHighException();
-    }
 }
 
 Form::Form(Form const &f): _gs(f._gs), _ge(f._ge), _name(f._name), _signed(f._signed)

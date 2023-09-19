@@ -38,7 +38,7 @@ int main()
         Bureaucrat C(1, "you");
         try
         {
-            A->beSigned(B);
+            B.signForm(A);
         }
         catch(const std::exception& e)
         {
@@ -46,7 +46,7 @@ int main()
         }
         try
         {
-            A->beSigned(C);
+            C.signForm(A);
         }
         catch(const std::exception& e)
         {
@@ -67,7 +67,7 @@ int main()
         Bureaucrat C(1, "you");
         try
         {
-            A->beSigned(B);
+            B.signForm(A);
         }
         catch(const std::exception& e)
         {
@@ -75,7 +75,7 @@ int main()
         }
         try
         {
-            A->beSigned(C);
+            C.signForm(A);
         }
         catch(const std::exception& e)
         {

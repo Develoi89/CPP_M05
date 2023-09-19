@@ -50,12 +50,15 @@ Bureaucrat::~Bureaucrat()
     std::cout << "Bureaucrat " << getName() << " destroyed." << std::endl;
 }
 
-void Bureaucrat::signForm(bool s, std::string const n)const
+void Bureaucrat::signForm(Form *s)
 {
-    if(s == true)
-        std::cout << _name << " signed " << n << "." << std::endl;
+    if(s->getSign() == false)
+    {
+        s->beSigned(*this);
+        std::cout << _name << " signed " << s->getName() << "." << std::endl;
+    }
     else
-        std::cout << _name << " couldn't sign " << n << " because the grade's bureaucrat is not enough." << std::endl;
+        std::cout << _name << " couldn't sign " << s->getName() << " because the Form its already signed." << std::endl;
 }
 
 std::ostream &operator << ( std::ostream & o, const Bureaucrat&b )
