@@ -16,5 +16,8 @@ int main()
     ppf = someRandomIntern.makeForm("presidential pardon", "Bender");
     AForm*  error;
     error = someRandomIntern.makeForm("error", "Bender");
+    delete rrf;
+    delete scf;
+    delete ppf;
     return 0;
 }

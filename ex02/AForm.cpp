@@ -9,14 +9,10 @@ AForm::AForm(const int  gs, const int ge, std::string const n): _gs(gs), _ge(ge)
 {
     if((gs > 0 && gs < 151) && (ge > 0 && ge < 151))
         std::cout << "AForm " << getName() << " created." << std::endl;
-    else if(gs < 1 && ge < 1)
-    {
-        throw GradeTooLowException();
-    }
-    else if(gs > 150 && ge >150)
-    {
+    else if(gs < 1 || ge < 1)
         throw GradeTooHighException();
-    }
+    else if(gs > 150 || ge >150)
+        throw GradeTooLowException();
 }
 
 void AForm::beSigned(Bureaucrat const &b)
